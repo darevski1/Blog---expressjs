@@ -3,7 +3,6 @@ var mongoose = require('mongoose');
 
 // create db connection
 
-mongoose.connect('mongodb+srv://darevski:Banana007@vodno.kkcro.mongodb.net/Vodno?retryWrites=true&w=majority', { useNewUrlParser: true });
 
 // check if db is connected
 
