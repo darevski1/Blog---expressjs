@@ -1,0 +1,38 @@
+<%- include('partials/header') %>
+
+<body>
+    <%- include('partials/navbar') %>
+
+    <!-- Container -->
+
+    <div class="container">
+        <h1 class="mt-5"><span>#</span>Write a post </h1>
+
+        <p>As a publishing platform, FoxNetwork allows you to share your stories and ideas with the world. If you're new
+            to
+            Medium, you can learn here about features available in the editor and publish your first story. We can't
+            wait to read it!</p>
+
+        <form action="/addpost" method="post">
+            <div class="form-group">
+                <label for="title">Blog post title:</label>
+                <input type="text" class="form-control" name="title">
+            </div>
+            <div class="form-group">
+                <select name="category" id="" class="form-control">
+                    <option value="politics">Politics</option>
+                    <option value="economy">Economy</option>
+                    <option value="sports">Sport</option>
+                    <option value="tehnology">Tehnology</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <textarea name="body" id="" cols="30" rows="10" class="form-control"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-info">Create</button>
+            </div>
+        </form>
+    </div>
+
+    <%- include('partials/footer') %>

@@ -1,0 +1,26 @@
+<%- include('partials/header') %>
+
+<body>
+  <%- include('partials/navbar') %>
+  <!-- content goes here -->
+  <div class="container">
+
+    <h1 class="mt-5">Lates FoxNetwork post</h1>
+
+    <% posts.forEach(function(post){ %>
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="featurette-heading"> <b><%= post.title %></b>
+          <br /><span class="date"><small><%= post.date%></small></span><span class="category"> Catgeory:<span
+              class="category_main"><%= post.category %></span>
+          </span></h2>
+        <p class="lead"><%= post.body %> </p>
+        <hr class="mt-4 mb-4">
+
+      </div>
+    </div>
+
+    <% }); %>
+  </div>
+
+  <%- include('partials/footer') %>
