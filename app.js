@@ -10,7 +10,9 @@ var mongooconnection = require('./config/db');
 
 var indexRouter = require('./routes/index');
 var addPostRouter = require('./routes/addpost');
-const moment = require('moment');
+var loginRouter = require('./routes/login');
+var registerRouter = require('./routes/register');
+
 
 var app = express();
 
@@ -28,9 +30,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // app route
 app.use('/', indexRouter);
+// add new post
 app.use('/addpost', addPostRouter);
-
-
+// login route
+app.use('/login', loginRouter);
+// register acoount
+app.use('/register', registerRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

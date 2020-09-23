@@ -14,3 +14,12 @@ a {
 h1 {
   color: #701010;
 }
+.form-signin {
+  max-width: 550px;
+  min-width: 300px;
+  width: 300px;
+  margin: 0px auto;
+}
+.mt-150 {
+  margin-top: 150px;
+}
